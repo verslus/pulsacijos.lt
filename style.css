@@ -396,22 +396,20 @@ a {
 }
 
 .concept-card {
-    background-color: var(--color-bg-card);
-    border: 1px solid var(--color-border);
-    /* Organic, slightly uneven border-radius to look handcrafted */
-    border-radius: 24px 18px 22px 20px;
+    background-color: rgba(255, 255, 255, 0.42);
+    border: none;
+    border-radius: 20px;
     padding: 2.25rem 2rem 1.5rem;
     display: flex;
     flex-direction: column;
     align-items: stretch;
     transition: var(--transition-smooth);
-    box-shadow: 0 4px 12px rgba(0, 119, 182, 0.02);
+    box-shadow: none;
 }
 
 .concept-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 16px 30px rgba(0, 119, 182, 0.07);
-    border-color: rgba(0, 119, 182, 0.15);
+    transform: translateY(-3px);
+    box-shadow: none;
 }
 
 .concept-card-title {
@@ -433,7 +431,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--color-bg-main);
+    background-color: rgba(250, 251, 253, 0.72);
     border-radius: 16px;
     overflow: hidden;
     position: relative;
@@ -473,8 +471,8 @@ a {
 }
 
 .process-step {
-    background-color: var(--color-bg-card);
-    border: 1px solid var(--color-border);
+    background-color: rgba(255, 255, 255, 0.46);
+    border: none;
     border-radius: 20px;
     padding: 1.5rem;
     display: flex;
@@ -482,13 +480,12 @@ a {
     gap: 1.5rem;
     width: 100%;
     max-width: 500px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+    box-shadow: none;
     transition: var(--transition-smooth);
 }
 
 .process-step:hover {
-    border-color: rgba(0, 119, 182, 0.15);
-    box-shadow: 0 10px 20px rgba(0, 119, 182, 0.04);
+    box-shadow: none;
 }
 
 .process-graphic {
@@ -559,8 +556,8 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    box-shadow: 0 10px 30px rgba(0, 119, 182, 0.04);
-    border: 1px solid var(--color-border);
+    box-shadow: 0 10px 30px rgba(0, 119, 182, 0.035);
+    border: none;
     transition: var(--transition-smooth);
 }
 
@@ -571,12 +568,10 @@ a {
 
 .offering-demo {
     background-color: var(--color-bg-demo);
-    border-color: rgba(0, 119, 182, 0.08);
 }
 
 .offering-seminar {
     background-color: var(--color-bg-seminar);
-    border-color: rgba(166, 43, 65, 0.08);
 }
 
 .offering-body {
@@ -742,10 +737,10 @@ a {
 /* Stats Styling */
 .stats-row-container {
     background-color: var(--color-bg-card);
-    border: 1px solid var(--color-border);
+    border: none;
     border-radius: 24px;
     padding: 3rem 2rem;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.01);
+    box-shadow: none;
 }
 
 .stats-title {
