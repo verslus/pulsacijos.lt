@@ -487,50 +487,68 @@ a {
 }
 
 .concept-card {
-    background-color: rgba(255, 255, 255, 0.42);
-    border: none;
-    border-radius: 20px;
-    padding: 2.25rem 2rem 1.5rem;
+    background-color: rgba(255, 255, 255, 0.84);
+    border: 1px solid rgba(216, 233, 240, 0.78);
+    border-radius: 16px;
+    padding: 2.25rem 1.65rem 2rem;
     display: flex;
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
+    text-align: center;
     transition: var(--transition-smooth);
-    box-shadow: none;
+    box-shadow: 0 18px 42px rgba(26, 47, 59, 0.055);
 }
 
 .concept-card:hover {
     transform: translateY(-3px);
-    box-shadow: none;
+    box-shadow: 0 22px 50px rgba(26, 47, 59, 0.075);
 }
 
 .concept-card-title {
-    font-size: 1.25rem;
+    font-size: 1.35rem;
     margin-bottom: 1rem;
     color: var(--color-primary);
-    line-height: 1.4;
+    line-height: 1.22;
 }
 
 .concept-card-text {
     font-size: 0.9375rem;
     color: var(--color-text-muted);
-    margin-bottom: 1.5rem;
+    margin-bottom: 0;
     flex-grow: 1;
+    line-height: 1.75;
 }
 
 .concept-graphic-box {
-    height: 160px;
+    order: -1;
+    width: min(220px, 88%);
+    aspect-ratio: 1;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(250, 251, 253, 0.72);
-    border-radius: 16px;
+    background: radial-gradient(circle, rgba(0, 119, 182, 0.08) 0 63%, transparent 64%);
+    border-radius: 999px;
     overflow: hidden;
     position: relative;
+    margin-bottom: 1.65rem;
 }
 
 .concept-svg {
-    width: 100%;
-    height: 100%;
+    width: 82%;
+    height: 82%;
+}
+
+.concept-card:nth-child(2) .concept-graphic-box {
+    background: radial-gradient(circle, rgba(49, 151, 149, 0.09) 0 63%, transparent 64%);
+}
+
+.concept-card:nth-child(3) .concept-graphic-box {
+    background: radial-gradient(circle, rgba(126, 87, 194, 0.08) 0 63%, transparent 64%);
+}
+
+.concept-card:nth-child(4) .concept-graphic-box {
+    background: radial-gradient(circle, rgba(242, 106, 27, 0.09) 0 63%, transparent 64%);
 }
 
 /* ==========================================================================
@@ -558,17 +576,19 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1.15rem;
+    counter-reset: process;
 }
 
 .process-step {
-    background-color: rgba(255, 255, 255, 0.46);
+    counter-increment: process;
+    background-color: rgba(255, 255, 255, 0.64);
     border: none;
-    border-radius: 20px;
-    padding: 1.5rem;
+    border-radius: 18px;
+    padding: 1.25rem;
     display: flex;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1rem;
     width: 100%;
     max-width: 500px;
     box-shadow: none;
@@ -580,30 +600,53 @@ a {
 }
 
 .process-graphic {
-    width: 70px;
-    height: 70px;
+    position: relative;
+    width: 86px;
+    height: 86px;
     flex-shrink: 0;
-    background-color: rgba(0, 119, 182, 0.05);
-    border-radius: 15px;
+    background: radial-gradient(circle, rgba(0, 119, 182, 0.09) 0 67%, transparent 68%);
+    border-radius: 999px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0.25rem;
+    padding: 0.5rem;
+}
+
+.process-graphic::after {
+    content: counter(process);
+    position: absolute;
+    left: 50%;
+    bottom: -0.75rem;
+    transform: translateX(-50%);
+    display: grid;
+    place-items: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 999px;
+    color: var(--color-primary);
+    background: rgba(0, 119, 182, 0.13);
+    font-weight: 800;
+    font-size: 1rem;
 }
 
 .process-graphic svg {
-    width: 100%;
-    height: 100%;
+    width: 82%;
+    height: 82%;
 }
 
 .process-info {
     flex-grow: 1;
+    padding-left: 0.25rem;
 }
 
 .process-step-title {
     font-size: 1.125rem;
     margin-bottom: 0.25rem;
     color: var(--color-primary);
+}
+
+.process-step-title::first-letter {
+    color: inherit;
 }
 
 .process-step-text {
@@ -613,14 +656,30 @@ a {
 }
 
 .process-arrow {
-    width: 28px;
-    height: 28px;
+    width: 26px;
+    height: 26px;
     display: flex;
     align-items: center;
     justify-content: center;
     transform: rotate(90deg); /* Downward arrow on mobile */
     color: var(--color-text-muted);
     opacity: 0.7;
+}
+
+.process-step:nth-of-type(3) .process-graphic {
+    background: radial-gradient(circle, rgba(49, 151, 149, 0.11) 0 67%, transparent 68%);
+}
+
+.process-step:nth-of-type(5) .process-graphic {
+    background: radial-gradient(circle, rgba(126, 87, 194, 0.1) 0 67%, transparent 68%);
+}
+
+.process-step:nth-of-type(7) .process-graphic {
+    background: radial-gradient(circle, rgba(242, 106, 27, 0.1) 0 67%, transparent 68%);
+}
+
+.process-step:nth-of-type(9) .process-graphic {
+    background: radial-gradient(circle, rgba(234, 173, 43, 0.12) 0 67%, transparent 68%);
 }
 
 .process-arrow svg {
@@ -1325,20 +1384,27 @@ a {
     .process-step {
         flex-direction: column;
         text-align: center;
-        padding: 1.25rem 0.75rem;
+        padding: 1.25rem 0.5rem;
         gap: 1rem;
         background-color: transparent;
-        width: 17%;
+        width: 17.5%;
+        max-width: none;
     }
 
     .process-graphic {
+        width: min(150px, 13vw);
+        height: min(150px, 13vw);
         margin: 0 auto;
     }
 
     .process-arrow {
         transform: rotate(0deg);
-        margin-top: 1.625rem;
-        width: 3.75%;
+        margin-top: min(4.6rem, 6vw);
+        width: 3%;
+    }
+
+    .process-step-title {
+        margin-top: 0.9rem;
     }
     
     /* Offering card layout customization */
