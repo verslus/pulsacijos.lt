@@ -444,28 +444,14 @@ a {
     overflow: hidden;
     position: relative;
     margin-bottom: 1.65rem;
-    background: radial-gradient(circle, rgba(0, 119, 182, 0.08) 0 63%, transparent 64%);
+    background: transparent;
 }
 
-.concept-svg {
+.concept-image {
+    display: block;
     width: 100%;
     height: 100%;
-}
-
-.concept-svg .soft-disc {
-    fill: transparent;
-}
-
-.concept-card:nth-child(2) .concept-graphic-box {
-    background: radial-gradient(circle, rgba(49, 151, 149, 0.09) 0 63%, transparent 64%);
-}
-
-.concept-card:nth-child(3) .concept-graphic-box {
-    background: radial-gradient(circle, rgba(126, 87, 194, 0.08) 0 63%, transparent 64%);
-}
-
-.concept-card:nth-child(4) .concept-graphic-box {
-    background: radial-gradient(circle, rgba(242, 106, 27, 0.09) 0 63%, transparent 64%);
+    object-fit: cover;
 }
 
 /* ==========================================================================
@@ -521,12 +507,13 @@ a {
     width: 86px;
     height: 86px;
     flex-shrink: 0;
-    background: radial-gradient(circle, rgba(0, 119, 182, 0.09) 0 67%, transparent 68%);
+    background: transparent;
     border-radius: 999px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0.35rem;
+    overflow: hidden;
+    padding: 0;
 }
 
 .process-step::before {
@@ -543,9 +530,11 @@ a {
     font-size: 0.95rem;
 }
 
-.process-graphic svg {
+.process-image {
+    display: block;
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 
 .process-info {
@@ -571,21 +560,9 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    transform: rotate(90deg); /* Downward arrow on mobile */
+    transform: rotate(90deg);
     color: var(--color-text-muted);
     opacity: 0.7;
-}
-
-.process-step:nth-of-type(3) .process-graphic {
-    background: radial-gradient(circle, rgba(49, 151, 149, 0.11) 0 67%, transparent 68%);
-}
-
-.process-step:nth-of-type(5) .process-graphic {
-    background: radial-gradient(circle, rgba(126, 87, 194, 0.1) 0 67%, transparent 68%);
-}
-
-.process-step:nth-of-type(7) .process-graphic {
-    background: radial-gradient(circle, rgba(234, 173, 43, 0.12) 0 67%, transparent 68%);
 }
 
 .process-arrow svg {
@@ -1056,7 +1033,7 @@ a {
         background-color: transparent;
         border: none;
         box-shadow: none;
-        width: 22%;
+        width: 17%;
         max-width: none;
     }
     
@@ -1067,8 +1044,8 @@ a {
     
     .process-graphic {
         order: 1;
-        width: min(136px, 17vw);
-        height: min(136px, 17vw);
+        width: min(136px, 14vw);
+        height: min(136px, 14vw);
         margin: 0 auto;
     }
 
@@ -1084,8 +1061,8 @@ a {
     
     .process-arrow {
         transform: rotate(0deg); /* Sideways arrow on desktop */
-        margin-top: min(4.1rem, 7vw); /* Centered with circles */
-        width: 5%;
+        margin-top: min(4.1rem, 5.8vw); /* Centered with circles */
+        width: 3.75%;
     }
     
     /* Horizontal 3-column layout for seminar schedule on tablet/desktop */
