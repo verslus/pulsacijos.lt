@@ -3,526 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pulsacijos.lt - Grįžk į kūno gyvybingumą</title>
-    <meta name="description" content="3 dienų Pulsacijų seminaras ir demo vakarai su Olegu Lapinu. Kelionė iš įtampos į vidinį ritmą per kvėpavimą, judesį ir emocinį išsilaisvinimą.">
-    
-    <!-- Google Fonts -->
+    <title>Pulsacijos - grįžkite iš chaoso į kūno ritmą</title>
+    <meta name="description" content="3 dienų Olego Lapino Pulsacijų seminaras norintiems paleisti įtampą, išsekimą ir grįžti į kūno ritmą per kvėpavimą, judesį, garsą ir saugią integraciją.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    
-    <!-- Stylesheet -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <!-- Header / Navigation -->
-    <header class="main-header">
-        <div class="container header-container">
-            <a href="#" class="logo">
-                <svg class="logo-svg" viewBox="0 0 180 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Continuous Line 1: Orange Accent starting in tangle, looping, and becoming the pulse -->
-                    <path d="M16 24c0-4-3-7-7-7S2 21 2 25s4 7 8 7c3 0 5-2 6-4c1-3-1-6-4-6s-5 2-5 5c0 2 2 4 4 4c6 0 12-4 18-5s12-2 18 1c7 3 14 3 21 0s14-6 21-3c6 2 11 8 16 8l4 6 5-23 5 30 4-13h21" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    
-                    <!-- Line 2: Sky Blue parallel flow line starting in tangle and running alongside -->
-                    <path d="M12 20c-1-2-3-3-5-3s-4 2-4 4c0 3 2 5 5 5c3 0 5-2 5-4c0-2-1-4-3-4s-3 1-3 3c0 4 6 1 12 0s12-3 18-3c8 0 16 4 24 4s16-4 24-4c8 0 15 3 22 2l4 4 5-18 5 24 4-10h16" stroke="var(--color-secondary)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
-                    
-                    <!-- Line 3: Deep Blue accent line in tangle and lower wave -->
-                    <path d="M14 28c1 2 3 3 5 3s4-2 4-4s-2-5-5-5s-5 2-5 4c0 2 2 3 4 3c5 0 10-2 15-4s10-4 15-2c8 3 15 3 22 0s14-6 21-3c5 2 9 6 13 6" stroke="var(--color-primary)" stroke-width="1.2" stroke-linecap="round" opacity="0.7"/>
-                </svg>
-                <span class="logo-text">Pulsacijos<span>.lt</span></span>
-            </a>
-            <nav class="nav-links">
-                <a href="#apie" class="nav-link">Apie metodą</a>
-                <a href="#kaip-veikia" class="nav-link">Kaip veikia</a>
-                <a href="#seminarai" class="nav-link">Seminarai</a>
-                <a href="#vedėjas" class="nav-link">Veda</a>
-            </nav>
-            <div class="header-cta">
-                <a href="#seminarai" class="btn btn-primary btn-sm">Registruotis</a>
-            </div>
-            <button class="mobile-menu-toggle" aria-label="Meniu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
+    <header class="site-header">
+        <a class="brand" href="#top" aria-label="Pulsacijos">
+            <img src="images/logo-pulsacijos-square-transparent.png" alt="" class="brand-mark">
+            <span>Pulsacijos</span>
+        </a>
+        <nav class="top-nav" aria-label="Pagrindine navigacija">
+            <a href="#kelione">3 dienos</a>
+            <a href="#demo">Demo</a>
+            <a href="#kaina">Kaina</a>
+        </nav>
     </header>
 
-    <!-- Mobile Navigation Drawer -->
-    <div class="mobile-nav">
-        <nav class="mobile-nav-links">
-            <a href="#apie" class="mobile-nav-link">Apie metodą</a>
-            <a href="#kaip-veikia" class="mobile-nav-link">Kaip veikia</a>
-            <a href="#seminarai" class="mobile-nav-link">Seminarai</a>
-            <a href="#vedėjas" class="mobile-nav-link">Veda</a>
-            <a href="#seminarai" class="btn btn-primary">Registruotis</a>
-        </nav>
-    </div>
-
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="container hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">Grįžk į kūno gyvybingumą</h1>
-                <p class="hero-subtitle">3 dienų Pulsacijų seminaras – tai kelionė iš įtampos į vidinį ritmą per kvėpavimą, judesį ir emocinį išsilaisvinimą.</p>
+    <main id="top">
+        <section class="hero section">
+            <div class="hero-copy">
+                <p class="eyebrow">Olego Lapino 3 dienų seminaras</p>
+                <h1>Grįžkite iš chaoso į kūno ritmą</h1>
+                <p class="lead">Pulsacijos kviečia paleisti įtampą ir išsekimą ne per dar vieną analizę, o per kvėpavimą, judesį, garsą, emocijų išraišką ir saugią integraciją.</p>
                 <div class="hero-actions">
-                    <a href="#seminarai" class="btn btn-primary">Registruotis</a>
-                    <a href="#demo" class="btn btn-secondary">Demo vakaras</a>
+                    <a class="button button-primary" href="#kaina">Rezervuoti vietą</a>
+                    <a class="button button-soft" href="#demo">Pradėti nuo demo</a>
                 </div>
             </div>
-            <div class="hero-image-wrapper">
-                <img src="images/hero.png" alt="Žmogus ramiai medituoja, suderindamas vidinį chaosą ir ritmą" class="hero-image">
+            <div class="hero-visual" aria-hidden="true">
+                <img src="images/logo-pulsacijos-square-transparent.png" alt="">
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Core Concepts Section -->
-    <section id="apie" class="concepts-section">
-        <div class="container">
-            <div class="grid grid-4-cols">
-                
-                <!-- Card 1: Problema -->
-                <div class="concept-card">
-                    <h3 class="concept-card-title">Problema: įtampa kaupiasi kūne</h3>
-                    <p class="concept-card-text">Neišreikštos emocijos virsta lėtine įtampa, išsekimu ir atitrūkimu nuo savęs.</p>
-                    <div class="concept-graphic-box">
-                        <svg class="concept-svg" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Distress figure outline -->
-                            <path d="M70 140 C75 110, 95 105, 100 120 C105 130, 105 150, 90 160 C80 165, 75 155, 70 140 Z" stroke="var(--color-text-main)" stroke-width="2" fill="none"/>
-                            <path d="M100 120 C105 105, 115 100, 120 115 C125 125, 120 145, 110 155" stroke="var(--color-text-main)" stroke-width="2" fill="none"/>
-                            <!-- Head tucked down -->
-                            <circle cx="85" cy="115" r="10" stroke="var(--color-text-main)" stroke-width="2" fill="none"/>
-                            <!-- Legs huddled -->
-                            <path d="M60 170 C70 165, 80 165, 90 170" stroke="var(--color-text-main)" stroke-width="2" fill="none"/>
-                            <path d="M50 170 C60 160, 100 160, 110 170" stroke="var(--color-text-main)" stroke-width="2" fill="none"/>
-                            
-                            <!-- Thought Bubbles (Rūpesčiai, Perdegimas, Kontrolė, Baimė) -->
-                            <!-- Rūpesčiai -->
-                            <g class="bubble bubble-1">
-                                <rect x="15" y="45" width="65" height="22" rx="11" stroke="var(--color-text-muted)" stroke-width="1" fill="var(--color-bg-card)"/>
-                                <text x="47.5" y="59" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" fill="var(--color-text-main)" text-anchor="middle">RŪPESČIAI</text>
-                                <circle cx="55" cy="74" r="2" fill="var(--color-text-muted)"/>
-                                <circle cx="65" cy="80" r="3" fill="var(--color-text-muted)"/>
-                            </g>
-                            <!-- Perdegimas -->
-                            <g class="bubble bubble-2">
-                                <rect x="110" y="40" width="75" height="22" rx="11" stroke="var(--color-text-muted)" stroke-width="1" fill="var(--color-bg-card)"/>
-                                <text x="147.5" y="54" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" fill="var(--color-text-main)" text-anchor="middle">PERDEGIMAS</text>
-                                <circle cx="130" cy="72" r="2" fill="var(--color-text-muted)"/>
-                                <circle cx="120" cy="82" r="3" fill="var(--color-text-muted)"/>
-                            </g>
-                            <!-- Kontrolė -->
-                            <g class="bubble bubble-3">
-                                <rect x="10" y="90" width="60" height="22" rx="11" stroke="var(--color-text-muted)" stroke-width="1" fill="var(--color-bg-card)"/>
-                                <text x="40" y="104" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" fill="var(--color-text-main)" text-anchor="middle">KONTROLĖ</text>
-                                <circle cx="60" cy="115" r="2" fill="var(--color-text-muted)"/>
-                            </g>
-                            <!-- Baimė -->
-                            <g class="bubble bubble-4">
-                                <rect x="135" y="95" width="50" height="22" rx="11" stroke="var(--color-text-muted)" stroke-width="1" fill="var(--color-bg-card)"/>
-                                <text x="160" y="109" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" fill="var(--color-text-main)" text-anchor="middle">BAIMĖ</text>
-                                <circle cx="140" cy="120" r="2" fill="var(--color-text-muted)"/>
-                            </g>
-                        </svg>
-                    </div>
-                </div>
-
-                <!-- Card 2: Kūno šarvai -->
-                <div class="concept-card">
-                    <h3 class="concept-card-title">Kūno šarvai sulaiko energiją</h3>
-                    <p class="concept-card-text">Įtampa tampa raumenų šarvais, kurie riboja laisvą kvėpavimą, jausmų tėkmę ir gyvybingumą.</p>
-                    <div class="concept-graphic-box">
-                        <svg class="concept-svg" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Human torso outline -->
-                            <path d="M100 45 C105 45, 108 48, 108 52 C108 57, 104 62, 100 62 C96 62, 92 57, 92 52 C92 48, 95 45, 100 45 Z" stroke="var(--color-text-main)" stroke-width="2" fill="none"/>
-                            <path d="M100 62 C95 65, 80 70, 75 80 C70 90, 72 105, 72 120 C75 120, 80 100, 85 92 C88 95, 88 120, 88 150 C88 160, 83 170, 80 175" stroke="var(--color-text-main)" stroke-width="2" fill="none"/>
-                            <path d="M100 62 C105 65, 120 70, 125 80 C130 90, 128 105, 128 120 C125 120, 120 100, 115 92 C112 95, 112 120, 112 150 C112 160, 117 170, 120 175" stroke="var(--color-text-main)" stroke-width="2" fill="none"/>
-                            
-                            <!-- Tension Bands/Armor Blocks -->
-                            <!-- Shoulders -->
-                            <path d="M78 80 C90 77, 110 77, 122 80" stroke="var(--color-accent)" stroke-width="4" stroke-linecap="round" opacity="0.85"/>
-                            <!-- Chest/Heart -->
-                            <path d="M86 98 C95 95, 105 95, 114 98" stroke="var(--color-accent)" stroke-width="4" stroke-linecap="round" opacity="0.85"/>
-                            <!-- Solar Plexus/Diaphragm -->
-                            <path d="M88 118 C95 116, 105 116, 112 118" stroke="var(--color-accent)" stroke-width="4" stroke-linecap="round" opacity="0.85"/>
-                            <!-- Pelvis -->
-                            <path d="M90 148 C95 146, 105 146, 110 148" stroke="var(--color-accent)" stroke-width="4" stroke-linecap="round" opacity="0.85"/>
-                            
-                            <!-- Connecting skeleton line -->
-                            <path d="M100 62 L100 150" stroke="var(--color-text-main)" stroke-width="1.5" stroke-dasharray="3 3"/>
-                        </svg>
-                    </div>
-                </div>
-
-                <!-- Card 3: Pulsacijos pradeda -->
-                <div class="concept-card">
-                    <h3 class="concept-card-title">Pulsacijos pradeda nuo kūno</h3>
-                    <p class="concept-card-text">Per kvėpavimą ir judesį saugiai išlaisviname tai, kas užstrigę ir grįžtame į natūralų ritmą.</p>
-                    <div class="concept-graphic-box">
-                        <svg class="concept-svg" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Open posture figure -->
-                            <path d="M100 50 C105 50, 109 54, 109 59 C109 64, 105 68, 100 68 C95 68, 91 64, 91 59 C91 54, 95 50, 100 50 Z" stroke="var(--color-text-main)" stroke-width="2" fill="none"/>
-                            <!-- Open arms -->
-                            <path d="M60 90 C70 85, 85 80, 100 80 C115 80, 130 85, 140 90" stroke="var(--color-text-main)" stroke-width="2" stroke-linecap="round" fill="none"/>
-                            <path d="M100 80 L100 140 C100 150, 93 170, 88 175 M100 140 C100 150, 107 170, 112 175" stroke="var(--color-text-main)" stroke-width="2" stroke-linecap="round" fill="none"/>
-                            
-                            <!-- Colorful energy flow lines entering the body -->
-                            <path d="M45 60 C65 65, 80 72, 95 78" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" opacity="0.6" class="flow-line"/>
-                            <path d="M40 75 C60 78, 75 82, 93 84" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" opacity="0.6" class="flow-line"/>
-                            <path d="M155 62 C135 66, 120 73, 105 78" stroke="var(--color-teal)" stroke-width="2" stroke-linecap="round" opacity="0.6" class="flow-line"/>
-                        </svg>
-                    </div>
-                </div>
-
-                <!-- Card 4: Rezultatas -->
-                <div class="concept-card">
-                    <h3 class="concept-card-title">Rezultatas: grįžimas į gyvybingumą</h3>
-                    <p class="concept-card-text">Daugiau energijos, lengvumo, emocinės laisvės ir gilesnio ryšio su savimi.</p>
-                    <div class="concept-graphic-box">
-                        <svg class="concept-svg" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Radiant posture figure -->
-                            <circle cx="100" cy="55" r="8" stroke="var(--color-text-main)" stroke-width="2" fill="none"/>
-                            <path d="M75 110 C80 95, 90 90, 100 90 C110 90, 120 95, 125 110" stroke="var(--color-text-main)" stroke-width="2" stroke-linecap="round" fill="none"/>
-                            <path d="M100 90 L100 145 M90 178 L100 145 L110 178" stroke="var(--color-text-main)" stroke-width="2" stroke-linecap="round" fill="none"/>
-                            
-                            <!-- Glowing Heart -->
-                            <path d="M100 106 C97 101, 91 101, 91 106 C91 112, 100 118, 100 118 C100 118, 109 112, 109 106 C109 101, 103 101, 100 106 Z" fill="var(--color-accent)" class="pulse-heart"/>
-                            
-                            <!-- Radiating Aura Lines -->
-                            <g class="aura-rays">
-                                <line x1="100" y1="35" x2="100" y2="20" stroke="var(--color-accent)" stroke-width="1.5" stroke-linecap="round"/>
-                                <line x1="120" y1="42" x2="132" y2="30" stroke="var(--color-accent)" stroke-width="1.5" stroke-linecap="round"/>
-                                <line x1="130" y1="62" x2="145" y2="62" stroke="var(--color-accent)" stroke-width="1.5" stroke-linecap="round"/>
-                                <line x1="80" y1="42" x2="68" y2="30" stroke="var(--color-accent)" stroke-width="1.5" stroke-linecap="round"/>
-                                <line x1="70" y1="62" x2="55" y2="62" stroke="var(--color-accent)" stroke-width="1.5" stroke-linecap="round"/>
-                                <line x1="125" y1="95" x2="140" y2="90" stroke="var(--color-accent)" stroke-width="1.5" stroke-linecap="round"/>
-                                <line x1="75" y1="95" x2="60" y2="90" stroke="var(--color-accent)" stroke-width="1.5" stroke-linecap="round"/>
-                            </g>
-                        </svg>
-                    </div>
-                </div>
-
+        <section class="section intro">
+            <div class="intro-card">
+                <p>Iš išorės gali atrodyti, kad viskas gerai. Dirbate. Bendraujate. Šypsotės. Funkcionuojate.</p>
+                <p>Bet kūnas gali pasakoti kitą istoriją: įtempti pečiai, suspaustas pilvas, sunkumas krūtinėje, paviršutiniškas kvėpavimas, nuovargis, nerimas, mažai energijos.</p>
             </div>
-        </div>
-    </section>
-
-    <!-- How it Works Section -->
-    <section id="kaip-veikia" class="process-section">
-        <div class="container">
-            <h2 class="section-title text-center">Kaip veikia Pulsacijos?</h2>
-            <p class="section-subtitle text-center">Natūralus procesas, kuris pamažu grąžina tave į ritmą.</p>
-            
-            <div class="process-timeline">
-                
-                <!-- Step 1: Kvėpavimas -->
-                <div class="process-step">
-                    <div class="process-graphic">
-                        <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Profile Head Inhaling -->
-                            <path d="M40 85 C40 85, 45 75, 45 60 C45 48, 52 40, 60 40 C65 40, 68 43, 70 47 C72 45, 75 42, 79 45 C84 48, 81 58, 77 62 C78 64, 82 65, 82 68 C82 72, 75 73, 72 73 C68 76, 65 85, 60 85 C55 85, 40 85, 40 85 Z" stroke="var(--color-text-main)" stroke-width="2" fill="none"/>
-                            <!-- Breath flow -->
-                            <path d="M85 64 C95 62, 105 58, 110 62 C115 66, 100 70, 90 68" stroke="var(--color-accent)" stroke-width="1.5" stroke-linecap="round" class="wind-line-1"/>
-                            <path d="M83 69 C93 68, 102 65, 107 68 C112 71, 98 74, 91 73" stroke="var(--color-accent)" stroke-width="1" stroke-linecap="round" class="wind-line-2"/>
-                        </svg>
-                    </div>
-                    <div class="process-info">
-                        <h4 class="process-step-title">1. Kvėpavimas</h4>
-                        <p class="process-step-text">Kvėpavimas pajudina užstrigusią energiją.</p>
-                    </div>
-                </div>
-
-                <div class="process-arrow">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="var(--color-text-muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </div>
-
-                <!-- Step 2: Judesys -->
-                <div class="process-step">
-                    <div class="process-graphic">
-                        <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Dynamic movement figure -->
-                            <circle cx="60" cy="35" r="7" stroke="var(--color-text-main)" stroke-width="2"/>
-                            <!-- Flowing action lines -->
-                            <path d="M42 65 C48 55, 55 52, 60 52 C65 52, 72 55, 78 65" stroke="var(--color-text-main)" stroke-width="2" stroke-linecap="round" fill="none"/>
-                            <path d="M60 52 L60 82 C60 90, 52 100, 48 105 M60 82 C60 90, 68 100, 72 105" stroke="var(--color-text-main)" stroke-width="2" stroke-linecap="round" fill="none"/>
-                            <!-- Movement blur/wind lines -->
-                            <path d="M35 50 C40 52, 42 55, 40 58" stroke="var(--color-accent)" stroke-width="1.5" stroke-linecap="round"/>
-                            <path d="M85 50 C80 52, 78 55, 80 58" stroke="var(--color-accent)" stroke-width="1.5" stroke-linecap="round"/>
-                        </svg>
-                    </div>
-                    <div class="process-info">
-                        <h4 class="process-step-title">2. Judesys</h4>
-                        <p class="process-step-text">Kūnas pradeda judėti, įtampa tirpsta.</p>
-                    </div>
-                </div>
-
-                <div class="process-arrow">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="var(--color-text-muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </div>
-
-                <!-- Step 3: Emocijų išraiška -->
-                <div class="process-step">
-                    <div class="process-graphic">
-                        <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Expressive profile head (mouth wide open) -->
-                            <path d="M40 85 C40 85, 45 75, 45 60 C45 48, 52 40, 60 40 C65 40, 68 43, 70 47 C72 45, 78 40, 80 46 C82 52, 78 58, 73 60 C75 62, 80 63, 77 68 C73 73, 68 73, 67 73 C65 76, 65 85, 60 85 C55 85, 40 85, 40 85 Z" stroke="var(--color-text-main)" stroke-width="2" fill="none"/>
-                            <!-- Expressive sound/release lines -->
-                            <path d="M83 58 L98 52 M85 62 L103 62 M83 66 L98 72" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
-                    </div>
-                    <div class="process-info">
-                        <h4 class="process-step-title">3. Emocijų išraiška</h4>
-                        <p class="process-step-text">Saugiai išleidžiame sukauptas emocijas ir įtampą.</p>
-                    </div>
-                </div>
-
-                <div class="process-arrow">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="var(--color-text-muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </div>
-
-                <!-- Step 4: Integracija -->
-                <div class="process-step">
-                    <div class="process-graphic">
-                        <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Balanced, aligned standing figure -->
-                            <circle cx="60" cy="35" r="7" stroke="var(--color-text-main)" stroke-width="2"/>
-                            <path d="M50 62 C55 58, 65 58, 70 62" stroke="var(--color-text-main)" stroke-width="2" stroke-linecap="round" fill="none"/>
-                            <path d="M60 52 L60 85 M52 110 L60 85 L68 110" stroke="var(--color-text-main)" stroke-width="2" stroke-linecap="round" fill="none"/>
-                            <!-- Surrounding harmony field -->
-                            <path d="M40 70 C35 80, 45 90, 60 90 C75 90, 85 80, 80 70" stroke="var(--color-teal)" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.6"/>
-                        </svg>
-                    </div>
-                    <div class="process-info">
-                        <h4 class="process-step-title">4. Integracija</h4>
-                        <p class="process-step-text">Įtampa ištirpsta, energija ima tekėti, grįžta vidinis ritmas.</p>
-                    </div>
-                </div>
-
+            <div class="signal-list" aria-label="Kūno signalai">
+                <span>Įtampa</span>
+                <span>Nuovargis</span>
+                <span>Nerimas</span>
+                <span>Sulaikymas</span>
+                <span>Mažai energijos</span>
+                <span>Atitrūkimas nuo kūno</span>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Offerings Section -->
-    <section id="seminarai" class="offerings-section">
-        <div class="container grid grid-2-cols">
-            
-            <!-- Box 1: Demo vakaras -->
-            <div id="demo" class="offering-card offering-demo">
-                <div class="offering-body">
-                    <h3 class="offering-title">Demo vakaras – patirk gyvai</h3>
-                    <p class="offering-text">Jei dar nežinai, ar Pulsacijos tau tinka – ateik į demo vakarą. Patirsi esminį metodo principą, pajusi atmosferą ir gausi atsakymus į savo klausimus.</p>
-                    <div class="offering-cta-wrapper">
-                        <a href="#seminarai" class="btn btn-primary">Registruotis | Demo</a>
-                    </div>
-                </div>
-                <div class="offering-image-container">
-                    <img src="images/demo_door.png" alt="Atviros durys, vedančios į šviesią ir saugią bendrystės erdvę" class="offering-image">
-                </div>
+        <section class="section body-text">
+            <p class="section-kicker">Kas vyksta kūne</p>
+            <h2>Kai ilgai laikomės, kūnas tampa šarvu.</h2>
+            <div class="text-flow">
+                <p>Mes dažnai išmokstame nuryti pyktį, sulaikyti verksmą, neparodyti baimės, būti stiprūs, patogūs, „normalūs“.</p>
+                <p>Trumpam tai padeda. Bet ilgainiui neišreikštos emocijos kaupiasi kūne kaip įtampa, kvėpavimo blokai, vidinis suspaudimas ir nejautrumas.</p>
+                <p>Pulsacijos padeda šį šarvą pamažu atlaisvinti. Kūnas gauna erdvės išreikšti tai, kas ilgai buvo sulaikyta: pyktį, liūdesį, baimę, ilgesį, jėgą, švelnumą ar džiaugsmą.</p>
             </div>
+        </section>
 
-            <!-- Box 2: 3 dienų seminaras -->
-            <div class="offering-card offering-seminar">
-                <div class="offering-body">
-                    <h3 class="offering-title">3 dienų seminaras – gilesnė kelionė</h3>
-                    <p class="offering-text">Trijų dienų procesas, kuriame palaipsniui per kvėpavimą, judesį ir emocijų išsilaisvinimą grįžtame į gyvybingumą ir vidinį ritmą.</p>
-                    
-                    <div class="seminar-schedule">
-                        <!-- Day 1 -->
-                        <div class="schedule-item">
-                            <div class="schedule-icon-wrapper">
-                                <svg class="schedule-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/>
-                                    <path d="M12 2V4M12 20V22M4 12H2M22 12H20M19.07 4.93L17.66 6.34M6.34 17.66L4.93 19.07M19.07 19.07L17.66 17.66M6.34 6.34L4.93 4.93" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                                </svg>
-                            </div>
-                            <div class="schedule-details">
-                                <span class="schedule-day">1 diena</span>
-                                <h5 class="schedule-theme">Pažadinimas</h5>
-                                <p class="schedule-desc">Kvėpavimas ir kūno budinimas.</p>
-                            </div>
-                        </div>
-                        <!-- Day 2 -->
-                        <div class="schedule-item">
-                            <div class="schedule-icon-wrapper">
-                                <svg class="schedule-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 7 19 4 14 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                                    <path d="M12 6C8.69 6 6 8.69 6 12C6 15.31 8.69 18 12 18C15 18 17 16 17 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                                    <path d="M12 9C10.34 9 9 10.34 9 12C9 13.5 10.5 14 12 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                                </svg>
-                            </div>
-                            <div class="schedule-details">
-                                <span class="schedule-day">2 diena</span>
-                                <h5 class="schedule-theme">Išsilaisvinimas</h5>
-                                <p class="schedule-desc">Įtampos tirpdymas ir emocijų išraiška.</p>
-                            </div>
-                        </div>
-                        <!-- Day 3 -->
-                        <div class="schedule-item">
-                            <div class="schedule-icon-wrapper">
-                                <svg class="schedule-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M2 10C5 7, 7 7, 10 10C13 13, 15 13, 18 10C21 7, 22 7, 24 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                                    <path d="M2 15C5 12, 7 12, 10 15C13 18, 15 18, 18 15C21 12, 22 12, 24 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                                    <path d="M2 5C5 2, 7 2, 10 5C13 8, 15 8, 18 5C21 2, 22 2, 24 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                                </svg>
-                            </div>
-                            <div class="schedule-details">
-                                <span class="schedule-day">3 diena</span>
-                                <h5 class="schedule-theme">Integracija</h5>
-                                <p class="schedule-desc">Ritmo atgavimas ir gyvybingumo įtvirtinimas.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="offering-cta-wrapper">
-                        <a href="#seminarai" class="btn btn-accent">Sužinoti daugiau</a>
-                    </div>
-                </div>
+        <section class="section split-feature">
+            <div>
+                <p class="section-kicker">Metodo kryptis</p>
+                <h2>Ne išsikrauti dėl išsikrovimo. Atlaisvinti energiją.</h2>
             </div>
+            <p>Tikslas - kad po įtampa atsirastų daugiau gyvybingumo, jautrumo, vidinės ramybės ir stipresnis ryšys su savimi. Kartais pradžioje iškyla chaosas, bet kai kūnui leidžiama kvėpuoti ir judėti, jis pamažu įgauna kryptį.</p>
+        </section>
 
-        </div>
-    </section>
-
-    <!-- Facilitator & Stats Section -->
-    <section id="vedėjas" class="facilitator-section">
-        <div class="container">
-            <div class="facilitator-wrapper">
-                <div class="facilitator-image-container">
-                    <img src="images/olegas_lapinas.jpg" alt="Olegas Lapinas - patyręs Pulsacijų seminarų vedėjas" class="facilitator-image">
-                </div>
-                <div class="facilitator-bio">
-                    <span class="facilitator-subtitle">Seminarą veda</span>
-                    <h2 class="facilitator-name">Olegas Lapinas</h2>
-                    <p class="facilitator-desc">Daugiau nei 40 metų praktikos turintis specialistas, Pulsacijas laiko vienu efektyviausių metodų, nes padeda pasiekti tikrą ir ilgalaikį pokytį.</p>
-                </div>
+        <section class="section for-whom" id="kam">
+            <p class="section-kicker">Kam skirtas seminaras</p>
+            <h2>Jeigu kūnas jau prašo daugiau erdvės.</h2>
+            <div class="checks">
+                <p>daug gyvenate „galvoje“ ir sunkiai jaučiate kūną;</p>
+                <p>pavargote nuo kontrolės, įtampos ir susilaikymo;</p>
+                <p>sunku išreikšti pyktį, liūdesį, verksmą ar norus;</p>
+                <p>jaučiate emocinį sustingimą arba lėtinę įtampą;</p>
+                <p>įprastas poilsis nebeatstato;</p>
+                <p>norite daugiau gyvybingumo, jautrumo ir spontaniškumo.</p>
             </div>
-            
-            <div class="stats-row-container">
-                <h4 class="stats-title">Ilgametė patirtis. Gilus supratimas. Gyvas vedimas.</h4>
-                <div class="grid grid-4-cols stats-grid">
-                    <!-- Stat 1 -->
-                    <div class="stat-box">
-                        <div class="stat-icon-wrapper">
-                            <svg class="stat-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="2"/>
-                                <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            </svg>
-                        </div>
-                        <p class="stat-text">40+ metų praktikos</p>
-                    </div>
-                    <!-- Stat 2 -->
-                    <div class="stat-box">
-                        <div class="stat-icon-wrapper">
-                            <svg class="stat-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M23 21V19C22.9993 18.1137 22.6907 17.2551 22.121 16.5714C21.5513 15.8877 20.7537 15.4182 19.85 15.24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M16 3.13C16.893 3.3961 17.6769 3.93886 18.2323 4.67879C18.7877 5.41872 19.0886 6.32185 19.0886 7.25C19.0886 8.17815 18.7877 9.08128 18.2323 9.82121C17.6769 10.5611 16.893 11.1039 16 11.37" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </div>
-                        <p class="stat-text">Tūkstančiai patenkintų dalyvių</p>
-                    </div>
-                    <!-- Stat 3 -->
-                    <div class="stat-box">
-                        <div class="stat-icon-wrapper">
-                            <svg class="stat-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 5.42 4.42 3 7.5 3C9.24 3 10.91 3.81 12 5.09C13.09 3.81 14.76 3 16.5 3C19.58 3 22 5.42 22 8.5C22 12.28 18.6 15.36 13.45 20.04L12 21.35Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </div>
-                        <p class="stat-text">Pagarba kūnui ir žmogui</p>
-                    </div>
-                    <!-- Stat 4 -->
-                    <div class="stat-box">
-                        <div class="stat-icon-wrapper">
-                            <svg class="stat-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </div>
-                        <p class="stat-text">Saugumas ir profesionalumas</p>
-                    </div>
-                </div>
+        </section>
+
+        <section class="section journey" id="kelione">
+            <p class="section-kicker">3 dienų kelionė</p>
+            <h2>Nuo pažadinimo iki integracijos.</h2>
+            <div class="day-grid">
+                <article class="day-card">
+                    <span>1 diena</span>
+                    <h3>Kūno pažadinimas</h3>
+                    <p>Kvėpavimas, pojūčiai ir saugus kontaktas su savimi.</p>
+                </article>
+                <article class="day-card">
+                    <span>2 diena</span>
+                    <h3>Įtampos išjudinimas</h3>
+                    <p>Susitikimas su kūno šarvais, sulaikytais jausmais ir užblokuota energija.</p>
+                </article>
+                <article class="day-card">
+                    <span>3 diena</span>
+                    <h3>Integracija</h3>
+                    <p>Išlaisvinta energija tampa ne chaosu, o gyvybingumu, jautrumu ir vidiniu stabilumu.</p>
+                </article>
             </div>
+        </section>
 
-        </div>
-    </section>
-
-    <!-- Footer CTA Section -->
-    <section class="footer-cta-section">
-        <div class="container text-center">
-            <h2 class="cta-title">Grįžk iš chaoso į ritmą</h2>
-            <p class="cta-subtitle">Pradėk nuo demo vakaro arba rinkis 3 dienų Pulsacijų seminarą ir grįžk į kūną, gyvybingumą ir autentišką buvimą.</p>
-            
-            <div class="cta-buttons">
-                <a href="#seminarai" class="btn btn-primary">Registruotis</a>
-                <a href="#apie" class="btn btn-secondary-light">Apie seminarą</a>
+        <section class="section demo" id="demo">
+            <div>
+                <p class="section-kicker">Demo vakaras</p>
+                <h2>Jeigu dar nežinote, ar Pulsacijos jums tinka.</h2>
+                <p>Tai trumpesnis būdas pajusti metodo principą, susipažinti su atmosfera, užduoti klausimus ir suprasti, ar norite eiti į 3 dienų seminarą.</p>
             </div>
+            <img src="images/demo_door.png" alt="Atviros durys i svelniai apsviesta seminaro erdve">
+        </section>
 
-            <div class="footer-graphic-container">
-                <!-- Silhouette chaos/harmony wave illustration -->
-                <svg class="footer-svg" viewBox="0 0 800 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Central silhouette figure -->
-                    <circle cx="400" cy="90" r="10" fill="var(--color-text-light)"/>
-                    <path d="M390 120 C395 105, 405 105, 410 120" stroke="var(--color-text-light)" stroke-width="3" stroke-linecap="round"/>
-                    <path d="M400 115 L400 170 M390 200 L400 170 L410 200" stroke="var(--color-text-light)" stroke-width="3" stroke-linecap="round"/>
-                    
-                    <!-- Left: Chaos tangle (Accent Orange) -->
-                    <path d="M380 120 C340 70, 310 160, 270 100 C230 40, 220 180, 180 120 C140 60, 110 160, 70 100 C30 40, 20 140, -20 100" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" opacity="0.75" class="chaos-line"/>
-                    <path d="M380 135 C350 90, 320 170, 290 120 C260 70, 230 150, 200 100 C170 50, 140 130, 110 90 C80 50, 50 110, 10 80" stroke="var(--color-primary-light)" stroke-width="1.5" stroke-linecap="round" opacity="0.6" class="chaos-line"/>
-                    
-                    <!-- Right: Calm energy/pulse wave (Sky Blue / Teal) -->
-                    <path d="M420 130 C450 110, 480 110, 510 130 C540 150, 570 150, 600 130 C630 110, 660 110, 690 130 C720 150, 750 150, 780 130 C810 110, 830 120, 850 130" stroke="var(--color-secondary)" stroke-width="3" stroke-linecap="round" class="calm-wave-1"/>
-                    <path d="M420 142 C450 127, 480 127, 510 142 C540 157, 570 157, 600 142 C630 127, 660 127, 690 142 C720 157, 750 157, 780 142" stroke="var(--color-primary-light)" stroke-width="1.5" stroke-linecap="round" class="calm-wave-2"/>
-                </svg>
+        <section class="section leader" id="vedejas">
+            <img src="images/olegas_lapinas.jpg" alt="Olegas Lapinas">
+            <div>
+                <p class="section-kicker">Seminarą veda</p>
+                <h2>Olegas Lapinas</h2>
+                <p>Daugiau nei 40 metų patirties turintis specialistas. Sertifikuotas pulsacijų specialistas.</p>
+                <blockquote>„Per savo 40+ metų praktiką pulsacijos - veiksmingiausias sutiktas metodas.“</blockquote>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer Copyright -->
-    <footer class="main-footer">
-        <div class="container text-center">
-            <p>&copy; 2026 Pulsacijos.lt. Visos teisės saugomos.</p>
-        </div>
+        <section class="section pricing" id="kaina">
+            <p class="section-kicker">Kaina</p>
+            <h2>Pradėkite nuo demo arba rinkitės 3 dienų procesą.</h2>
+            <div class="price-grid">
+                <article class="price-card">
+                    <span>Demo vakaras</span>
+                    <strong>30 eurų</strong>
+                    <a class="button button-soft" href="mailto:info@pulsacijos.lt?subject=Demo%20vakaras">Domina demo</a>
+                </article>
+                <article class="price-card featured">
+                    <span>3 dienų seminaras</span>
+                    <strong>350 eurų</strong>
+                    <p>Poroms arba dviem draugams - po 300 eurų.</p>
+                    <a class="button button-primary" href="mailto:info@pulsacijos.lt?subject=3%20dienų%20Pulsacijų%20seminaras">Rezervuoti vietą</a>
+                </article>
+            </div>
+            <p class="price-note">Vėliau 3 dienų seminaro kaina kils iki 400 eurų.</p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <img src="images/logo-pulsacijos-square-transparent.png" alt="" aria-hidden="true">
+        <p>Pulsacijos - grįžimas iš chaoso į kūno ritmą.</p>
     </footer>
-
-    <!-- Interactive JS Script -->
-    <script>
-        // Mobile Navigation Toggle
-        const menuToggle = document.querySelector('.mobile-menu-toggle');
-        const mobileNav = document.querySelector('.mobile-nav');
-
-        menuToggle.addEventListener('click', () => {
-            menuToggle.classList.toggle('active');
-            mobileNav.classList.toggle('active');
-            document.body.classList.toggle('no-scroll');
-        });
-
-        // Close menu on link click
-        document.querySelectorAll('.mobile-nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                menuToggle.classList.remove('active');
-                mobileNav.classList.remove('active');
-                document.body.classList.remove('no-scroll');
-            });
-        });
-
-        // Smooth Scroll offset for sticky header
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    const headerHeight = document.querySelector('.main-header').offsetHeight;
-                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
-                    
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-    </script>
 </body>
 </html>
