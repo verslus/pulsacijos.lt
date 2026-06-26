@@ -5,8 +5,9 @@
     /* Color Palette */
     --color-primary: #0077B6;       /* Deep Blue */
     --color-primary-light: #00B4D8; /* Bright Sky Blue */
-    --color-accent: #A62B41;        /* Wine Red / Bordo Accent */
-    --color-accent-light: #C43D56;  /* Lighter Red for hover */
+    --color-accent: #F26A1B;        /* Warm orange life / pulse accent */
+    --color-accent-light: #FF7A2F;  /* Lighter orange for hover */
+    --color-bordo: #A62B41;         /* Secondary wine accent */
     --color-teal: #319795;          /* Teal for calm wave/integration */
     
     --color-bg-main: #FAFBFD;       /* Cool ice off-white */
@@ -322,7 +323,7 @@ a {
    ========================================================================== */
 .hero-section {
     position: relative;
-    padding: 3rem 0 4rem;
+    padding: 2rem 0 2.5rem;
     overflow: hidden;
 }
 
@@ -330,7 +331,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 3rem;
+    gap: 1.75rem;
 }
 
 .hero-content {
@@ -339,7 +340,7 @@ a {
 }
 
 .hero-title {
-    font-size: 2.5rem;
+    font-size: 2.25rem;
     font-weight: 800;
     margin-bottom: 1.25rem;
     color: var(--color-primary);
@@ -350,7 +351,7 @@ a {
 .hero-subtitle {
     font-size: 1.125rem;
     color: var(--color-text-muted);
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     line-height: 1.7;
 }
 
@@ -367,7 +368,7 @@ a {
 
 .hero-image-wrapper {
     width: 100%;
-    max-width: 500px;
+    max-width: 420px;
     display: flex;
     justify-content: center;
     position: relative;
@@ -384,11 +385,101 @@ a {
 }
 
 /* ==========================================================================
+   Story Section
+   ========================================================================== */
+.story-section {
+    padding: 3.5rem 0;
+    background: linear-gradient(180deg, rgba(255,255,255,0.7), rgba(242,106,27,0.05));
+}
+
+.story-container,
+.transformation-container {
+    display: grid;
+    gap: 2rem;
+    align-items: center;
+}
+
+.story-content .section-title,
+.transformation-content .section-title {
+    text-align: left;
+}
+
+.story-text {
+    display: grid;
+    gap: 1rem;
+    color: var(--color-text-muted);
+    max-width: 680px;
+}
+
+.story-visual,
+.transformation-visual {
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.58);
+    padding: 1rem;
+    overflow: hidden;
+}
+
+.story-visual svg,
+.transformation-visual svg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ==========================================================================
    Core Concepts Section (4 Cards)
    ========================================================================== */
 .concepts-section {
-    padding: 4rem 0;
+    padding: 3.5rem 0;
     background-color: rgba(235, 230, 223, 0.2);
+}
+
+/* ==========================================================================
+   Audience Section
+   ========================================================================== */
+.audience-section {
+    padding: 4rem 0;
+}
+
+.audience-panel {
+    background: rgba(255, 255, 255, 0.66);
+    border-radius: 28px;
+    padding: 2rem;
+}
+
+.audience-panel .section-title,
+.audience-panel .section-subtitle {
+    text-align: left;
+}
+
+.audience-panel .section-subtitle {
+    margin: 0 0 1.5rem;
+}
+
+.audience-checklist {
+    display: grid;
+    gap: 0.8rem;
+}
+
+.audience-checklist p {
+    position: relative;
+    margin: 0;
+    padding-left: 2rem;
+    color: var(--color-text-main);
+    font-size: 1rem;
+}
+
+.audience-checklist p::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--color-accent);
+    font-weight: 900;
+}
+
+.audience-cta {
+    margin-top: 2rem;
 }
 
 .grid-4-cols {
@@ -446,7 +537,7 @@ a {
    Process Section (How it works)
    ========================================================================== */
 .process-section {
-    padding: 5rem 0;
+    padding: 4rem 0;
 }
 
 .section-title {
@@ -537,6 +628,27 @@ a {
     height: 100%;
 }
 
+.process-note {
+    max-width: 760px;
+    margin: 2.5rem auto 0;
+    color: var(--color-text-muted);
+    text-align: center;
+    font-size: 1rem;
+}
+
+/* ==========================================================================
+   Transformation Section
+   ========================================================================== */
+.transformation-section {
+    padding: 4rem 0;
+    background: linear-gradient(180deg, rgba(242,106,27,0.06), rgba(0,119,182,0.04));
+}
+
+.transformation-content p {
+    color: var(--color-text-muted);
+    margin-bottom: 1rem;
+}
+
 /* ==========================================================================
    Offerings Section (2 Cards)
    ========================================================================== */
@@ -592,6 +704,17 @@ a {
     color: var(--color-text-muted);
     margin-bottom: 2rem;
     line-height: 1.6;
+}
+
+.offering-price {
+    color: var(--color-primary);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.offering-price strong {
+    color: var(--color-accent);
+    font-size: 1.35rem;
 }
 
 .offering-cta-wrapper {
@@ -732,6 +855,72 @@ a {
     font-size: 1.0625rem;
     color: var(--color-text-muted);
     line-height: 1.7;
+}
+
+.facilitator-quote {
+    margin-top: 1.5rem;
+    padding: 1.25rem 1.5rem;
+    border-left: 4px solid var(--color-accent);
+    border-radius: 16px;
+    background: rgba(242, 106, 27, 0.08);
+    color: var(--color-text-main);
+    font-size: 1.1rem;
+    line-height: 1.55;
+}
+
+/* ==========================================================================
+   Pricing Section
+   ========================================================================== */
+.pricing-section {
+    padding: 5rem 0;
+    background: rgba(235, 230, 223, 0.15);
+}
+
+.pricing-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.price-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.price-card-main {
+    background: linear-gradient(135deg, rgba(242,106,27,0.16), rgba(255,255,255,0.82));
+}
+
+.price-label {
+    color: var(--color-primary);
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.price-card strong {
+    color: var(--color-accent);
+    font-size: 2.6rem;
+    line-height: 1;
+}
+
+.price-card p {
+    color: var(--color-text-muted);
+    font-size: 0.98rem;
+}
+
+.price-card .btn {
+    margin-top: auto;
+}
+
+.price-footnote {
+    margin-top: 1.5rem;
+    color: var(--color-text-muted);
+    text-align: center;
 }
 
 /* Stats Styling */
@@ -973,32 +1162,50 @@ a {
     .cta-buttons .btn {
         width: auto;
     }
+
+    .pricing-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
 }
 
 /* Medium Tablets & Laptops (768px+) */
 @media (min-width: 768px) {
     .hero-container {
-        padding: 2rem 0;
+        padding: 2rem 0 3rem;
+    }
+
+    .story-container,
+    .transformation-container {
+        grid-template-columns: 1fr 0.9fr;
+    }
+
+    .audience-panel {
+        display: grid;
+        grid-template-columns: 0.75fr 1.25fr;
+        gap: 2rem;
+        align-items: start;
+        padding: 2.5rem;
+    }
+
+    .audience-cta {
+        grid-column: 2;
+        margin-top: 0.5rem;
     }
     
     .process-timeline {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
-        gap: 0;
-        position: relative;
-        padding-top: 1.5rem;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        padding-top: 0;
     }
     
     .process-step {
-        flex-direction: column;
-        text-align: center;
-        padding: 1.5rem 1rem;
-        gap: 1rem;
-        background-color: transparent;
-        border: none;
-        box-shadow: none;
-        width: 22%;
+        flex-direction: row;
+        text-align: left;
+        padding: 1.5rem;
+        gap: 1.5rem;
+        background-color: rgba(255, 255, 255, 0.46);
+        width: 100%;
     }
     
     .process-step:hover {
@@ -1009,13 +1216,13 @@ a {
     .process-graphic {
         width: 80px;
         height: 80px;
-        margin: 0 auto;
+        margin: 0;
     }
     
     .process-arrow {
-        transform: rotate(0deg); /* Sideways arrow on desktop */
-        margin-top: 1.625rem; /* Centered with circles */
-        width: 5%;
+        transform: rotate(90deg);
+        margin-top: 0;
+        width: 28px;
     }
     
     /* Horizontal 3-column layout for seminar schedule on tablet/desktop */
@@ -1075,7 +1282,7 @@ a {
         text-align: left;
         justify-content: space-between;
         gap: 4rem;
-        padding: 4rem 0 6rem;
+        padding: 4rem 0 5rem;
     }
     
     .hero-content {
@@ -1105,6 +1312,33 @@ a {
     .grid-2-cols {
         grid-template-columns: repeat(2, 1fr);
         gap: 2.5rem;
+    }
+
+    .process-timeline {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 0;
+        padding-top: 1.5rem;
+    }
+
+    .process-step {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.25rem 0.75rem;
+        gap: 1rem;
+        background-color: transparent;
+        width: 17%;
+    }
+
+    .process-graphic {
+        margin: 0 auto;
+    }
+
+    .process-arrow {
+        transform: rotate(0deg);
+        margin-top: 1.625rem;
+        width: 3.75%;
     }
     
     /* Offering card layout customization */
