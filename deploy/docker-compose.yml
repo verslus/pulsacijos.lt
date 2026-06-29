@@ -1,0 +1,14 @@
+name: pulsacijos-lt
+
+services:
+  app:
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    image: pulsacijos-lt-app-image
+    container_name: pulsacijos-lt-app
+    restart: unless-stopped
+    env_file:
+      - .env
+    ports:
+      - "127.0.0.1:3121:4180"
