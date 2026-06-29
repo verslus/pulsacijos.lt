@@ -98,6 +98,34 @@ function buildRegistrationEmail({ name, email, phone, note, plan, pageUrl, occur
   return { html, text };
 }
 
+function buildMaterialEmail({ email, pageUrl, occurredAt, userAgent }) {
+  const rows = [
+    ["El. paštas", email],
+    ["Laikas", occurredAt],
+    ["Puslapis", pageUrl || "nėra"],
+    ["User-Agent", userAgent || "nėra"],
+  ];
+
+  const text = ["Pulsacijų paskaitos medžiagos užklausa", "", ...rows.map(([label, value]) => `${label}: ${value}`)].join("\n");
+  const html = `
+    <div style="font-family:Arial,sans-serif;line-height:1.5;color:#111827">
+      <h2 style="margin:0 0 16px">Pulsacijų paskaitos medžiagos užklausa</h2>
+      <table style="border-collapse:collapse;width:100%;max-width:760px">
+        <tbody>
+          ${rows.map(([label, value]) => `
+            <tr>
+              <td style="padding:8px 12px;border:1px solid #d1d5db;font-weight:700;background:#f9fafb;width:190px">${escapeHtml(label)}</td>
+              <td style="padding:8px 12px;border:1px solid #d1d5db">${escapeHtml(value)}</td>
+            </tr>
+          `).join("")}
+        </tbody>
+      </table>
+    </div>
+  `;
+
+  return { html, text };
+}
+
 async function sendRegistrationEmail({ name, email, phone, note, plan, pageUrl, userAgent }) {
   const apiKey = process.env.RESEND_API_KEY;
   const from = process.env.REGISTRATION_FROM_EMAIL || process.env.CONTACT_CLICK_FROM_EMAIL;
@@ -129,6 +157,45 @@ async function sendRegistrationEmail({ name, email, phone, note, plan, pageUrl, 
       to: splitEmails(to),
       reply_to: email,
       subject: `Pulsacijų registracija: ${plan}`,
+      html,
+      text,
+    }),
+  }).catch(() => null);
+
+  if (!response?.ok) {
+    return { ok: false, reason: "send-failed" };
+  }
+
+  return { ok: true };
+}
+
+async function sendMaterialEmail({ email, pageUrl, userAgent }) {
+  const apiKey = process.env.RESEND_API_KEY;
+  const from = process.env.REGISTRATION_FROM_EMAIL || process.env.CONTACT_CLICK_FROM_EMAIL;
+  const to = process.env.REGISTRATION_TO_EMAIL || process.env.CONTACT_CLICK_TO_EMAIL;
+
+  if (!apiKey || !from || !to) {
+    return { ok: false, reason: "missing-env" };
+  }
+
+  const { html, text } = buildMaterialEmail({
+    email,
+    pageUrl,
+    userAgent,
+    occurredAt: new Date().toISOString(),
+  });
+
+  const response = await fetch("https://api.resend.com/emails", {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${apiKey}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      from,
+      to: splitEmails(to),
+      reply_to: email,
+      subject: "Pulsacijų paskaitos medžiagos užklausa",
       html,
       text,
     }),
@@ -185,6 +252,37 @@ async function handleRegistration(request, response) {
   return sendJson(response, 202, { ok: true });
 }
 
+async function handleMaterial(request, response) {
+  let payload;
+  try {
+    payload = await readJson(request);
+  } catch {
+    return sendJson(response, 400, { error: "Nepavyko perskaityti duomenų." });
+  }
+
+  const email = String(payload.email || "").trim();
+  const pageUrl = String(payload.pageUrl || "").trim();
+
+  if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    return sendJson(response, 400, { error: "Įveskite teisingą el. paštą." });
+  }
+
+  const result = await sendMaterialEmail({
+    email,
+    pageUrl,
+    userAgent: request.headers["user-agent"] || "",
+  });
+
+  if (!result.ok) {
+    return sendJson(response, 503, {
+      error: "Užklausos išsiųsti nepavyko. Susisiekite el. paštu.",
+      reason: result.reason,
+    });
+  }
+
+  return sendJson(response, 202, { ok: true });
+}
+
 function isPublicFile(relativePath) {
   return (
     relativePath === "/index.html" ||
@@ -232,6 +330,10 @@ createServer(async (request, response) => {
 
   if (request.method === "POST" && request.url === "/api/register") {
     return handleRegistration(request, response);
+  }
+
+  if (request.method === "POST" && request.url === "/api/material") {
+    return handleMaterial(request, response);
   }
 
   if (request.method === "GET" || request.method === "HEAD") {

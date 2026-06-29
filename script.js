@@ -14,6 +14,9 @@ const emailReply = document.querySelector("#emailReply");
 const emailPhone = document.querySelector("#emailPhone");
 const emailNote = document.querySelector("#emailNote");
 const emailFormStatus = document.querySelector("#emailFormStatus");
+const materialForm = document.querySelector("#materialForm");
+const materialEmail = document.querySelector("#materialEmail");
+const materialStatus = document.querySelector("#materialStatus");
 
 const defaultPlan = "3 dienų seminaras - liepos 31 - rugpjūčio 2 d. Vilniuje - 350 €";
 
@@ -26,7 +29,7 @@ const buildMessage = () => {
 const updateRegistrationLinks = () => {
   const message = buildMessage();
   if (whatsappLink) {
-    whatsappLink.href = `whatsapp://send?phone=${WHATSAPP_NUMBER}&text=${encodeURIComponent(message)}`;
+    whatsappLink.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
   }
 };
 
@@ -120,6 +123,49 @@ emailRegistrationForm?.addEventListener("submit", (event) => {
       if (emailFormStatus) {
         emailFormStatus.textContent = error.message;
         emailFormStatus.classList.add("is-error");
+      }
+    })
+    .finally(() => {
+      if (submitButton) submitButton.disabled = false;
+    });
+});
+
+materialForm?.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const email = materialEmail?.value.trim();
+  if (!email) return;
+
+  const submitButton = materialForm.querySelector("button[type='submit']");
+  if (materialStatus) {
+    materialStatus.textContent = "Siunčiama...";
+    materialStatus.classList.remove("is-error", "is-success");
+  }
+  if (submitButton) submitButton.disabled = true;
+
+  fetch("/api/material", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      email,
+      pageUrl: window.location.href,
+    }),
+  })
+    .then(async (response) => {
+      const payload = await response.json().catch(() => ({}));
+      if (!response.ok) {
+        throw new Error(payload.error || "Užklausos išsiųsti nepavyko.");
+      }
+      if (materialStatus) {
+        materialStatus.textContent = "Užklausa išsiųsta. Medžiagą atsiųsime el. paštu.";
+        materialStatus.classList.add("is-success");
+      }
+      materialForm.reset();
+    })
+    .catch((error) => {
+      if (materialStatus) {
+        materialStatus.textContent = error.message;
+        materialStatus.classList.add("is-error");
       }
     })
     .finally(() => {
