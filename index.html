@@ -27,7 +27,7 @@
             <nav class="nav-links" aria-label="Pagrindinė navigacija">
                 <a href="#kam" class="nav-link">Kam skirta</a>
                 <a href="#metodas" class="nav-link">Metodas</a>
-                <a href="#seminaras" class="nav-link">Seminaras</a>
+                <a href="#demo" class="nav-link">Demo</a>
                 <a href="#kaina" class="nav-link">Kaina</a>
                 <a href="#vedejas" class="nav-link">Olegas</a>
             </nav>
@@ -44,7 +44,7 @@
         <nav class="mobile-nav-links" aria-label="Mobilioji navigacija">
             <a href="#kam" class="mobile-nav-link">Kam skirta</a>
             <a href="#metodas" class="mobile-nav-link">Metodas</a>
-            <a href="#seminaras" class="mobile-nav-link">Seminaras</a>
+            <a href="#demo" class="mobile-nav-link">Demo</a>
             <a href="#kaina" class="mobile-nav-link">Kaina</a>
             <a href="#vedejas" class="mobile-nav-link">Olegas</a>
             <a href="#registracija" class="btn btn-primary">Registruotis į seminarą</a>
@@ -95,8 +95,7 @@
             <div class="container section-grid">
                 <div>
                     <p class="eyebrow">Kam skirta</p>
-                    <h2 class="section-title">Šis seminaras jums, jeigu</h2>
-                    <p class="section-subtitle">Jei atpažįstate bent kelias iš šių būsenų, kūno procesas gali būti tinkamas pirmas žingsnis.</p>
+                    <h2 class="section-title">Šis seminaras jums, jeigu:</h2>
                 </div>
                 <div class="check-list">
                     <p>daug gyvenate „galvoje“ ir sunkiai jaučiate kūną;</p>
@@ -109,7 +108,8 @@
 
         <section class="quote-section">
             <div class="container quote-panel">
-                <p class="eyebrow">Olego Lapino komentaras</p>
+                <p class="eyebrow">Svarbus klausimas</p>
+                <h2>Kodėl kūnas vis dar įsitempęs, nors viską jau suprantate?</h2>
                 <blockquote>
                     <p>Kūnas labai dažnai prisimena tai, ką protas jau seniai paaiškino. Neišreikštas pyktis, sulaikytas verksmas, baimė ar poreikis būti stipriam gali virsti įtampa, kvėpavimo blokais ir nejautrumu. Pulsacijose mes nebandome žmogaus sulaužyti ar priversti kažką jausti. Mes sukuriame sąlygas kūnui pamažu atleisti tai, ką jis per ilgai laikė.</p>
                     <cite>Olegas Lapinas</cite>
@@ -122,11 +122,11 @@
                 <div class="section-head">
                     <p class="eyebrow">Apie metodą</p>
                     <h2 class="section-title">Jeigu dar nežinote, kas yra Pulsacijos</h2>
-                    <p class="section-subtitle">Tai nėra dar viena savęs analizė. Procesas vyksta per kūną: kvėpavimą, emocijų išraišką ir saugią integraciją.</p>
+                    <p class="section-subtitle">Tai nėra dar viena savęs analizė. Procesas vyksta per kūną: kvėpavimą, emocijų išraišką ir saugią integraciją. Jeigu dar nežinote, ar Pulsacijos jums tinka, rekomenduojame pradėti nuo demo vakaro.</p>
                 </div>
                 <div class="concept-grid">
                     <article class="concept-card">
-                        <img src="images/pulsacijos-concept-1.png" alt="" class="concept-image" loading="lazy" width="350" height="350">
+                        <img src="images/pulsacijos-process-3.png" alt="" class="concept-image" loading="lazy" width="250" height="250">
                         <h3>Gyvenimas vyksta galvoje</h3>
                         <p>Iš išorės funkcionuojame, bet kūnas kalba įtampa, nuovargiu, paviršutinišku kvėpavimu ir nerimu.</p>
                     </article>
@@ -196,53 +196,7 @@
                     </div>
                 </div>
                 <div class="pulse-card" aria-hidden="true">
-                    <svg class="pulse-svg" viewBox="0 0 520 180" role="img">
-                        <defs>
-                            <linearGradient id="pulseGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                                <stop offset="0%" stop-color="#A62B41"/>
-                                <stop offset="45%" stop-color="#F0A13A"/>
-                                <stop offset="72%" stop-color="#319795"/>
-                                <stop offset="100%" stop-color="#0077B6"/>
-                            </linearGradient>
-                            <filter id="softGlow" x="-20%" y="-80%" width="140%" height="260%">
-                                <feGaussianBlur stdDeviation="5" result="blur"/>
-                                <feMerge>
-                                    <feMergeNode in="blur"/>
-                                    <feMergeNode in="SourceGraphic"/>
-                                </feMerge>
-                            </filter>
-                        </defs>
-                        <path class="pulse-path ghost" d="M18 92 C42 38, 68 146, 92 76 C118 8, 152 166, 181 75 C212 13, 242 150, 275 86 C309 20, 344 145, 380 90 C415 42, 449 78, 502 78"/>
-                        <path class="pulse-path main" d="M18 92 C42 38, 68 146, 92 76 C118 8, 152 166, 181 75 C212 13, 242 150, 275 86 C309 20, 344 145, 380 90 C415 42, 449 78, 502 78"/>
-                        <path class="pulse-path calm" d="M18 122 C110 98, 176 124, 246 111 C318 98, 382 108, 502 91"/>
-                    </svg>
-                </div>
-            </div>
-        </section>
-
-        <section id="seminaras" class="seminar-section">
-            <div class="container">
-                <div class="section-head">
-                    <p class="eyebrow">Seminaras</p>
-                    <h2 class="section-title">Jeigu jau žinote, kas yra Pulsacijos</h2>
-                    <p class="section-subtitle">Šis 3 dienų seminaras skirtas gilesniam procesui, kuriame yra laiko ir patirčiai, ir integracijai.</p>
-                </div>
-                <div class="journey-grid">
-                    <article class="journey-card">
-                        <span>1 diena</span>
-                        <h3>Kūno pažadinimas</h3>
-                        <p>Kvėpavimas, pojūčiai, saugus kontaktas su savimi.</p>
-                    </article>
-                    <article class="journey-card">
-                        <span>2 diena</span>
-                        <h3>Įtampos ir emocijų išjudinimas</h3>
-                        <p>Susitikimas su kūno šarvais, sulaikytais jausmais ir užblokuota energija.</p>
-                    </article>
-                    <article class="journey-card">
-                        <span>3 diena</span>
-                        <h3>Integracija</h3>
-                        <p>Išlaisvinta energija tampa ne chaosu, o gyvybingumu, jautrumu ir vidiniu stabilumu.</p>
-                    </article>
+                    <img src="images/logo-pulsacijos-square-transparent.png" alt="" class="rhythm-logo" loading="lazy" width="1024" height="1024">
                 </div>
             </div>
         </section>
@@ -348,7 +302,6 @@
                     <div class="trust-row">
                         <span>40+ metų praktikos</span>
                         <span>Sertifikuotas specialistas</span>
-                        <span>Saugus procesas ir ribos</span>
                     </div>
                 </div>
             </div>

@@ -411,7 +411,6 @@ p {
 .concepts-section,
 .process-section,
 .transformation-section,
-.seminar-section,
 .offers-section,
 .pricing-section,
 .testimonials-section,
@@ -500,6 +499,13 @@ p {
     gap: 1rem;
 }
 
+.quote-panel h2 {
+    color: #fff;
+    font-size: clamp(1.75rem, 5vw, 3rem);
+    margin-bottom: 1rem;
+    max-width: 860px;
+}
+
 .quote-panel p {
     font-size: clamp(1.1rem, 4vw, 1.45rem);
     line-height: 1.55;
@@ -514,14 +520,12 @@ p {
 .concept-grid,
 .pricing-grid,
 .testimonial-grid,
-.journey-grid,
 .offer-grid {
     display: grid;
     gap: 1rem;
 }
 
 .concept-card,
-.journey-card,
 .price-card,
 .testimonial-card,
 .offer-card,
@@ -547,7 +551,6 @@ p {
 }
 
 .concept-card h3,
-.journey-card h3,
 .process-step h3,
 .offer-card h2,
 .registration-card h3 {
@@ -556,7 +559,6 @@ p {
 }
 
 .concept-card p,
-.journey-card p,
 .process-step p,
 .offer-card p,
 .price-card p,
@@ -639,47 +641,22 @@ p {
 .pulse-card {
     display: grid;
     place-items: center;
-    min-height: 220px;
-    padding: 1.2rem;
+    min-height: 230px;
+    padding: 0;
     border-radius: 28px;
     background: #fff;
     box-shadow: var(--shadow);
+    overflow: hidden;
 }
 
-.pulse-svg {
+.rhythm-logo {
     width: 100%;
-    max-width: 520px;
-    height: auto;
+    height: 230px;
+    max-width: none;
+    object-fit: cover;
+    object-position: center;
 }
 
-.pulse-path {
-    fill: none;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-}
-
-.pulse-path.ghost {
-    stroke: rgba(166, 43, 65, 0.12);
-    stroke-width: 20;
-}
-
-.pulse-path.main {
-    stroke: url(#pulseGradient);
-    stroke-width: 8;
-    filter: url(#softGlow);
-}
-
-.pulse-path.calm {
-    stroke: rgba(0, 110, 174, 0.62);
-    stroke-width: 4;
-    stroke-dasharray: 10 14;
-}
-
-.journey-card {
-    padding: 1.3rem;
-}
-
-.journey-card span,
 .price-card span {
     display: inline-flex;
     margin-bottom: 0.8rem;
@@ -811,6 +788,7 @@ p {
     height: auto;
     border-radius: 999px;
     object-fit: cover;
+    object-position: center top;
     box-shadow: 0 16px 40px rgba(17, 45, 63, 0.12);
 }
 
@@ -989,7 +967,7 @@ textarea:focus {
 .footer-cta-section {
     position: relative;
     margin-top: 2rem;
-    padding: 5rem 0 4rem;
+    padding: 6.6rem 0 4.4rem;
     background: var(--blue-900);
     color: #fff;
     overflow: hidden;
@@ -1022,6 +1000,7 @@ textarea:focus {
 .footer-cta-inner h2 {
     color: #fff;
     font-size: clamp(2rem, 8vw, 3.5rem);
+    line-height: 1.16;
 }
 
 .footer-cta-inner p {
@@ -1057,8 +1036,7 @@ textarea:focus {
 
     .concept-grid,
     .pricing-grid,
-    .testimonial-grid,
-    .journey-grid {
+    .testimonial-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
@@ -1119,7 +1097,6 @@ textarea:focus {
     .concepts-section,
     .process-section,
     .transformation-section,
-    .seminar-section,
     .offers-section,
     .pricing-section,
     .testimonials-section,
@@ -1154,7 +1131,6 @@ textarea:focus {
         transform: none;
     }
 
-    .journey-grid,
     .pricing-grid,
     .testimonial-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
