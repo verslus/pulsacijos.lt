@@ -541,6 +541,26 @@ p {
     text-align: center;
 }
 
+.demo-callout {
+    display: grid;
+    gap: 1rem;
+    align-items: center;
+    margin: -0.4rem 0 1.4rem;
+    padding: 1.15rem;
+    border-radius: 20px;
+    background: linear-gradient(135deg, rgba(224, 241, 251, 0.86), rgba(255, 255, 255, 0.96));
+    border: 1px solid rgba(220, 234, 242, 0.9);
+}
+
+.demo-callout h3 {
+    margin-bottom: 0.35rem;
+    font-size: 1.25rem;
+}
+
+.demo-callout p:not(.eyebrow) {
+    color: var(--muted);
+}
+
 .concept-image {
     width: min(230px, 88%);
     aspect-ratio: 1;
@@ -1038,6 +1058,10 @@ textarea:focus {
     .pricing-grid,
     .testimonial-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .demo-callout {
+        grid-template-columns: minmax(0, 1fr) auto;
     }
 
     .registration-layout,
