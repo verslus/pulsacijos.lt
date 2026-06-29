@@ -12,16 +12,14 @@
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" href="images/favicon.png" type="image/png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="preload" href="style.css?v=fd21292" as="style">
+    <link rel="stylesheet" href="style.css?v=fd21292">
 </head>
 <body>
     <header class="main-header">
         <div class="container header-container">
             <a href="#" class="logo" aria-label="Pulsacijos.lt pradinis puslapis">
-                <img src="images/logo-pulsacijos-square-transparent.png" alt="" class="logo-image" width="78" height="34">
+                <img src="images/logo-wave.webp" alt="" class="logo-image" width="180" height="95">
                 <span class="logo-text">Pulsacijos<span>.lt</span></span>
             </a>
             <nav class="nav-links" aria-label="Pagrindinė navigacija">
@@ -69,7 +67,11 @@
                     </blockquote>
                 </div>
                 <div class="hero-visual" aria-hidden="true">
-                    <img src="images/hero.png" alt="" class="hero-image" width="1040" height="780">
+                    <picture>
+                        <source media="(min-width: 700px)" srcset="images/hero-900.webp" type="image/webp">
+                        <source media="(min-width: 700px)" srcset="images/hero.png" type="image/png">
+                        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="" class="hero-image" width="900" height="900" decoding="async">
+                    </picture>
                 </div>
             </div>
         </section>
@@ -86,7 +88,7 @@
                     </div>
                 </div>
                 <div class="story-visual">
-                    <img src="images/pulsacijos-concept-2.png" alt="Kūne besikaupianti įtampa" loading="lazy" width="350" height="350">
+                    <img src="images/pulsacijos-concept-2.webp" alt="Kūne besikaupianti įtampa" loading="lazy" width="300" height="300" decoding="async">
                 </div>
             </div>
         </section>
@@ -134,22 +136,22 @@
                 </div>
                 <div class="concept-grid">
                     <article class="concept-card">
-                        <img src="images/pulsacijos-process-3.png" alt="" class="concept-image" loading="lazy" width="250" height="250">
+                        <img src="images/pulsacijos-process-3.webp" alt="" class="concept-image" loading="lazy" width="250" height="250" decoding="async">
                         <h3>Gyvenimas vyksta galvoje</h3>
                         <p>Iš išorės funkcionuojame, bet kūnas kalba įtampa, nuovargiu, paviršutinišku kvėpavimu ir nerimu.</p>
                     </article>
                     <article class="concept-card">
-                        <img src="images/pulsacijos-concept-2.png" alt="" class="concept-image" loading="lazy" width="350" height="350">
+                        <img src="images/pulsacijos-concept-2.webp" alt="" class="concept-image" loading="lazy" width="300" height="300" decoding="async">
                         <h3>Kūnas tampa šarvu</h3>
                         <p>Sulaikyti jausmai kaupiasi kaip kvėpavimo blokai, vidinis suspaudimas ir nejautrumas.</p>
                     </article>
                     <article class="concept-card">
-                        <img src="images/pulsacijos-concept-3.png" alt="" class="concept-image" loading="lazy" width="350" height="350">
+                        <img src="images/pulsacijos-concept-3.webp" alt="" class="concept-image" loading="lazy" width="300" height="300" decoding="async">
                         <h3>Kvėpavimas išjudina</h3>
                         <p>Kūnas gauna erdvės paleisti tai, kas buvo sulaikyta, be spaudimo ir skubėjimo.</p>
                     </article>
                     <article class="concept-card">
-                        <img src="images/pulsacijos-concept-4.png" alt="" class="concept-image" loading="lazy" width="350" height="350">
+                        <img src="images/pulsacijos-concept-4.webp" alt="" class="concept-image" loading="lazy" width="300" height="300" decoding="async">
                         <h3>Chaosas įgauna ritmą</h3>
                         <p>Įtampa minkštėja, kvėpavimas gilėja, atsiranda daugiau gyvybingumo, jautrumo ir vidinės ramybės.</p>
                     </article>
@@ -166,21 +168,21 @@
                 </div>
                 <div class="process-row">
                     <article class="process-step">
-                        <img src="images/pulsacijos-process-1.png" alt="" class="process-image" loading="lazy" width="250" height="250">
+                        <img src="images/pulsacijos-process-1.webp" alt="" class="process-image" loading="lazy" width="250" height="250" decoding="async">
                         <span class="step-number">1</span>
                         <h3>Kvėpavimas</h3>
                         <p>Kvėpavimas pajudina užstrigusią energiją ir pažadina kūno pojūčius.</p>
                     </article>
                     <div class="process-arrow" aria-hidden="true"></div>
                     <article class="process-step">
-                        <img src="images/pulsacijos-process-3.png" alt="" class="process-image" loading="lazy" width="250" height="250">
+                        <img src="images/pulsacijos-process-3.webp" alt="" class="process-image" loading="lazy" width="250" height="250" decoding="async">
                         <span class="step-number">2</span>
                         <h3>Emocijų išraiška</h3>
                         <p>Saugiai išleidžiame sukauptas emocijas ir įtampą, kurios ilgai neturėjo vietos.</p>
                     </article>
                     <div class="process-arrow" aria-hidden="true"></div>
                     <article class="process-step">
-                        <img src="images/pulsacijos-process-5.png" alt="" class="process-image" loading="lazy" width="250" height="250">
+                        <img src="images/pulsacijos-process-5.webp" alt="" class="process-image" loading="lazy" width="250" height="250" decoding="async">
                         <span class="step-number">3</span>
                         <h3>Integracija</h3>
                         <p>Išlaisvinta energija tampa gyvybingumu, jautrumu ir vidiniu stabilumu.</p>
@@ -222,7 +224,7 @@
                     </div>
                 </div>
                 <div class="pulse-card" aria-hidden="true">
-                    <img src="images/logo-pulsacijos-square-transparent.png" alt="" class="rhythm-logo" loading="lazy" width="1024" height="1024">
+                    <img src="images/logo-rhythm.webp" alt="" class="rhythm-logo" loading="lazy" width="760" height="400" decoding="async">
                 </div>
             </div>
         </section>
@@ -241,7 +243,7 @@
                         </ul>
                         <a href="#registracija" class="btn btn-accent choose-plan" data-plan="3 dienų seminaras - liepos 31 - rugpjūčio 2 d. Vilniuje - 350 €">Registruotis į seminarą</a>
                     </div>
-                    <img src="images/pulsacijos-process-5.png" alt="" class="offer-image" loading="lazy" width="250" height="250">
+                    <img src="images/pulsacijos-process-5.webp" alt="" class="offer-image" loading="lazy" width="250" height="250" decoding="async">
                 </article>
                 <article id="demo" class="offer-card">
                     <div class="offer-content">
@@ -255,7 +257,7 @@
                         </ul>
                         <a href="#registracija" class="btn btn-secondary choose-plan" data-plan="Demo vakaras - liepos 22 d. Vilniuje - 30 €">Registruotis į demo</a>
                     </div>
-                    <img src="images/demo_door.png" alt="" class="offer-image" loading="lazy" width="900" height="700">
+                    <img src="images/demo-door-520.webp" alt="" class="offer-image" loading="lazy" width="520" height="520" decoding="async">
                 </article>
             </div>
         </section>
@@ -363,7 +365,7 @@
         <section id="vedejas" class="facilitator-section">
             <div class="container facilitator-panel">
                 <div class="facilitator-image-wrap">
-                    <img src="images/olegas_lapinas.jpg" alt="Olegas Lapinas" class="facilitator-image" width="240" height="240">
+                    <img src="images/olegas-lapinas-420.webp" alt="Olegas Lapinas" class="facilitator-image" width="420" height="498" loading="lazy" decoding="async">
                 </div>
                 <div class="facilitator-content">
                     <p class="eyebrow">Seminarą veda</p>
@@ -449,12 +451,11 @@
         <div class="container footer-inner">
             <p>&copy; 2026 Pulsacijos.lt</p>
             <div class="footer-links">
-                <a href="mailto:aleksejus@lapinoskrynia.lt">aleksejus@lapinoskrynia.lt</a>
                 <a href="#registracija">Registracija</a>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=fd21292"></script>
 </body>
 </html>

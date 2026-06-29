@@ -14,6 +14,7 @@ const mimeTypes = new Map([
   [".png", "image/png"],
   [".svg", "image/svg+xml"],
   [".webp", "image/webp"],
+  [".avif", "image/avif"],
 ]);
 
 function splitEmails(value = "") {
@@ -311,7 +312,7 @@ function serveStatic(request, response) {
   }
 
   response.writeHead(200, {
-    "Cache-Control": relativePath === "/index.html" ? "no-cache" : "public, max-age=3600",
+    "Cache-Control": relativePath === "/index.html" ? "no-cache" : "public, max-age=31536000, immutable",
     "Content-Type": mimeTypes.get(path.extname(fullPath)) || "application/octet-stream",
   });
 
