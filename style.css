@@ -1091,6 +1091,14 @@ textarea:focus {
         padding: 0 2rem;
     }
 
+    .section-title {
+        font-size: clamp(2rem, 4.8vw, 3.1rem);
+    }
+
+    .section-head {
+        margin-bottom: 1.65rem;
+    }
+
     .nav-links {
         display: flex;
         align-items: center;
@@ -1106,18 +1114,29 @@ textarea:focus {
     }
 
     .hero-section {
-        padding: 5rem 0 6rem;
+        padding: 3.75rem 0 4.5rem;
     }
 
     .hero-container {
-        grid-template-columns: minmax(0, 1.05fr) minmax(420px, 0.95fr);
-        gap: 4rem;
+        grid-template-columns: minmax(0, 1fr) minmax(360px, 0.88fr);
+        gap: 3.25rem;
+    }
+
+    .hero-title {
+        font-size: clamp(3.4rem, 6.2vw, 4.75rem);
+        max-width: 760px;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+        max-width: 650px;
     }
 
     .hero-visual {
         align-self: stretch;
         display: grid;
         place-items: center;
+        max-height: 620px;
     }
 
     .story-section,
@@ -1133,7 +1152,7 @@ textarea:focus {
     .faq-section,
     .registration-section,
     .material-section {
-        padding: 5.8rem 0;
+        padding: 4.5rem 0;
     }
 
     .story-container,
@@ -1141,11 +1160,27 @@ textarea:focus {
     .transformation-container,
     .facilitator-panel {
         grid-template-columns: minmax(0, 1fr) minmax(360px, 0.78fr);
-        gap: 4rem;
+        gap: 3.25rem;
     }
 
     .concept-grid {
         grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .concept-card {
+        padding: 1.1rem;
+    }
+
+    .concept-image {
+        width: min(185px, 78%);
+        margin-bottom: 0.9rem;
+    }
+
+    .concept-card h3,
+    .process-step h3,
+    .offer-card h2,
+    .registration-card h3 {
+        font-size: 1.22rem;
     }
 
     .process-row {
@@ -1154,10 +1189,22 @@ textarea:focus {
         gap: 1.2rem;
     }
 
+    .process-step {
+        padding: 1.15rem;
+    }
+
+    .process-image {
+        width: min(170px, 74%);
+    }
+
     .process-arrow {
         align-self: center;
-        margin-top: 6.8rem;
+        margin-top: 5.3rem;
         transform: none;
+    }
+
+    .process-note {
+        margin-top: 1.8rem;
     }
 
     .pricing-grid,
@@ -1167,8 +1214,12 @@ textarea:focus {
 
     .offer-card {
         display: grid;
-        grid-template-columns: minmax(0, 1fr) 230px;
+        grid-template-columns: minmax(0, 1fr) 210px;
         align-items: stretch;
+    }
+
+    .offer-content {
+        padding: 1.25rem;
     }
 
     .offer-image {
@@ -1176,7 +1227,36 @@ textarea:focus {
         max-height: none;
     }
 
+    .facilitator-panel {
+        padding: 2rem;
+    }
+
     .registration-layout {
         grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.75fr);
+    }
+}
+
+@media (min-width: 1180px) {
+    .testimonial-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .testimonial-card {
+        padding: 1.15rem;
+    }
+
+    .testimonial-card::before {
+        font-size: 4rem;
+    }
+
+    .testimonial-card p {
+        font-size: 0.95rem;
+        line-height: 1.55;
+    }
+
+    .avatar {
+        width: 2.35rem;
+        height: 2.35rem;
+        margin-bottom: 0.8rem;
     }
 }
